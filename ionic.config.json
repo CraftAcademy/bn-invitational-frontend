@@ -1,0 +1,8 @@
+{
+  "name": "bn-invitational-frontend",
+  "app_id": "510f0823",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
