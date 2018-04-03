@@ -38,7 +38,7 @@ module.exports = {
   plugins: [
     new webpack.ContextReplacementPlugin(
       /(ionic-angular)|(angular(\\|\/)core(\\|\/)@angular)/,
-      root('./src'),
+      root('../src'),
       {}
     )
   ]
