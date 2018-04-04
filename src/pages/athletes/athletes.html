@@ -9,17 +9,9 @@
 <ion-content padding>
 
   <ng-container *ngFor="let athlete of athletes" class="container">
-      <div class="athlete">  
-        <div class="image">
-          <!-- Can't seem to find the image-path, 
-          in the terminal it's athlete.image.attachment.blob.filename -->
-          <!-- <img src="{{ athlete.attributes.image }}"> -->
-        </div>
-        <div class="content">
-          <h3>{{ athlete.attributes.name }}</h3>
-            
-        </div>
-      </div>
-    </ng-container>
+    <div class="athlete">  
+      <h3>{{ athlete.attributes.name }}</h3>
+    </div>
+  </ng-container>
 
 </ion-content>
