@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Athletes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ng-container *ngFor="let athlete of athletes" class="container">
+    <div class="athlete">  
+      <h3>{{ athlete.attributes.name }}</h3>
+    </div>
+  </ng-container>
+
+</ion-content>
