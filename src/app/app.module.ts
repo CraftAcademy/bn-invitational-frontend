@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { HomePage } from '../pages/home/home';
 import { AthletePage } from '../pages/athlete/athlete';
+import { AthletesPage } from '../pages/athletes/athletes';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     AthletePage,
+    AthletesPage,
     TabsPage
   ],
   imports: [
@@ -28,6 +30,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     AthletePage,
+    AthletesPage,
     TabsPage
   ],
   providers: [
