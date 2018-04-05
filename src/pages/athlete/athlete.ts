@@ -16,15 +16,11 @@ export class AthletePage {
     this.athletesProvider
         .show(this.navParams.get('url'))             
         .subscribe(athlete => {
-                console.log(athlete.data.attributes);
-
                 this.athlete = athlete.data;
              });
   }
 
   ionViewDidLoad() {
-    let url = this.navParams.get('url'); 
-    console.log(`this is the url: ${url}`);
   }
 
 }
