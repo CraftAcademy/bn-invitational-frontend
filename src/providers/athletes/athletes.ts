@@ -5,19 +5,19 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AthletesProvider {
-  private apiUrl: string = 'https://votingapi.herokuapp.com/api/v1';
+  private apiUrl: string = 'https://votingapi.herokuapp.com/api/v1/athletes';
   
   constructor(private http: Http) {}
 
   // GET athletes
   all() {
-    return this.http.get(`${this.apiUrl}/athletes/`)
+    return this.http.get(this.apiUrl)
                     .map((response: Response) => response.json());
   }
   
   // GET athletes/id
   show(id: any) {
-    return this.http.get(`${this.apiUrl}/athletes/${id}`)
+    return this.http.get(`${this.apiUrl}/${id}`)
                     .map((response: Response) => response.json());
 
   }
@@ -29,7 +29,7 @@ export class AthletesProvider {
     headers.append("Accept" , 'application/json');
     headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
-    return this.http.put(`${this.apiUrl}/athletes/${id}`, body, options)
+    return this.http.put(`${this.apiUrl}/${id}`, body, options)
   }
 
 }

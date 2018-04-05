@@ -12,23 +12,9 @@
           <p>{{ athlete.attributes.home }}</p>
           <p>{{ athlete.attributes.starttime }} </p>
         </div>
-        <ion-list>
-          <ion-item>
-            <ion-label>Ratings</ion-label>
-            <ion-select [(ngModel)]="vote" cancelText="F This" okText="Oki doki guys!">
-              <ion-option value="1">1</ion-option>
-              <ion-option value="2">2</ion-option>
-              <ion-option value="3">3</ion-option>
-              <ion-option value="4">4</ion-option>
-              <ion-option value="5">5</ion-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-
+       
+        <p *ngIf="message">{{ message }}</p>
+        <button (click)="selectANumber()">Ratings</button>
         <button ion-button (click)="clickToVote(athlete.id)">Click To Vote</button>
-        
-        <!-- <div class="vote">
-          <button ion-button (click)="selectANumber()">Vote!!!</button>
-        </div> -->
       </ng-container>
 </ion-content>
