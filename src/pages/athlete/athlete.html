@@ -1,27 +1,16 @@
-<!--
-  Generated template for the AthletePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>athlete</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-    <ng-container *ngIf="athlete" class="container">
-        <div class="athlete">
-          <h3>{{ athlete.attributes.name }}</h3>
-          <p>{{ athlete.attributes.age }}</p>
-          <p>{{ athlete.attributes.home }}</p>
-          <p>{{ athlete.attributes.starttime }} </p>
-        </div>
-      </ng-container>
-
-
+  <ng-container *ngIf="athlete" class="container">
+    <div class="athlete">
+      <h3>{{ athlete.attributes.name }}</h3>
+      <p>{{ athlete.attributes.age }}</p>
+      <p>{{ athlete.attributes.home }}</p>
+      <p>{{ athlete.attributes.starttime }} </p>
+    </div>
+  </ng-container>
 </ion-content>
