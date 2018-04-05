@@ -11,7 +11,7 @@
   <ng-container *ngFor="let athlete of athletes" class="container">
     <div class="athlete">
       <h3>{{ athlete.attributes.name }}</h3>
-      <button ion-button (click)="launchAthletePage()">Show profile</button>
+      <button ion-button (click)="launchAthletePage(athlete.attributes.link)">Show profile</button>
     </div>
   </ng-container>
 

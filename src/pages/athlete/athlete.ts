@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AthletesPage } from '../athletes/athletes';
-/**
- * Generated class for the AthletePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AthletesProvider } from '../../providers/athletes/athletes';
 
 @IonicPage()
 @Component({
@@ -15,11 +10,20 @@ import { AthletesPage } from '../athletes/athletes';
 })
 export class AthletePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  athlete: any[];
+
+  constructor(private athletesProvider: AthletesProvider, private navCtrl: NavController, private navParams: NavParams) {
+    this.athletesProvider
+        .show(this.navParams.get('url'))             
+        .subscribe(athlete => {
+                console.log(athlete);
+                this.athlete = athlete.data;
+             });
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AthletePage');
+    let url = this.navParams.get('url'); 
+    console.log(`this is the url: ${url}`);
   }
 
 }

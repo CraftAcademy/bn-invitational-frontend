@@ -19,7 +19,9 @@ export class AthletesProvider {
   }
   
   // GET athletes/id
-  show(id: number) {
+  show(url: any) {
+    return this.http.get(url)
+                    .map((response: Response) => response.json());
 
   }
 
