@@ -18,7 +18,6 @@ export class AthletesPage {
     this.athletesProvider
         .all()             
         .subscribe(athletes => {
-                console.log(athletes);
                 this.athletes = athletes.data;
              });
   }

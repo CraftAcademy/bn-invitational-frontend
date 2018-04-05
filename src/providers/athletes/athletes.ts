@@ -5,12 +5,9 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AthletesProvider {
-  //private apiUrl: string = 'http://localhost:3000/api/v1/articles';
   private apiUrl: string = 'https://votingapi.herokuapp.com/api/v1';
   
-  constructor(private http: Http) {
-    
-  }
+  constructor(private http: Http) {}
 
   // GET athletes
   all() {
