@@ -15,16 +15,16 @@ export class AthletePage {
 
   jsonData = {
     numbers: [
-      { description: "1" },
-      { description: "2" },
-      { description: "3" },
-      { description: "4" },
-      { description: "5" },
-      { description: "6" },
-      { description: "7" },
-      { description: "8" },
-      { description: "9" },
-      { description: "10" },
+      { vote: "1" },
+      { vote: "2" },
+      { vote: "3" },
+      { vote: "4" },
+      { vote: "5" },
+      { vote: "6" },
+      { vote: "7" },
+      { vote: "8" },
+      { vote: "9" },
+      { vote: "10" },
     ]
   };
 
@@ -36,7 +36,8 @@ export class AthletePage {
       ],
     }).then(
       result => {
-        console.log(result[0].description + ' at index: ' + result[0].index);
+        this.athletesProvider
+        .update(this.navParams.get('url'), result.vote)
       },
       err => console.log('Error: ', err)
       );

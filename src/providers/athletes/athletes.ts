@@ -22,4 +22,12 @@ export class AthletesProvider {
 
   }
 
+  update(url, result){
+    let params = {
+      vote: result
+    }
+    return this.http.put(url, params)
+                    .map((response: Response) => response.json());
+  }
+
 }
