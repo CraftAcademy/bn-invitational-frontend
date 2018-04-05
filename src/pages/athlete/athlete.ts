@@ -16,7 +16,8 @@ export class AthletePage {
     this.athletesProvider
         .show(this.navParams.get('url'))             
         .subscribe(athlete => {
-                console.log(athlete);
+                console.log(athlete.data.attributes);
+
                 this.athlete = athlete.data;
              });
   }
