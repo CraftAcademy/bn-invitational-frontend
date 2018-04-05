@@ -15,30 +15,36 @@ export class AthletePage {
 
   jsonData = {
     numbers: [
-     { description: "1" },
+      { description: "1" },
       { description: "2" },
-      { description: "3" }
-    ],
-    fruits: [
-      { description: "Apple" },
-      { description: "Banana" },
-      { description: "Tangerine" }
-    ],
-    firstNames: [
-      { name: "Fred", id: '1' },
-      { name: "Jane", id: '2' },
-      { name: "Bob", id: '3' },
-      { name: "Earl", id: '4' },
-      { name: "Eunice", id: '5' }
-    ],
-    lastNames: [
-      { name: "Johnson", id: '100' },
-      { name: "Doe", id: '101' },
-      { name: "Kinishiwa", id: '102' },
-      { name: "Gordon", id: '103' },
-      { name: "Smith", id: '104' }
+      { description: "3" },
+      { description: "4" },
+      { description: "5" },
+      { description: "6" },
+      { description: "7" },
+      { description: "8" },
+      { description: "9" },
+      { description: "10" },
     ]
   };
+
+  showSelector() {
+    
+  }
+
+  selectANumber() {
+    this.selector.show({
+      title: "1 is BAD 10 is GOOD",
+      items: [
+        this.jsonData.numbers
+      ],
+    }).then(
+      result => {
+        console.log(result[0].description + ' at index: ' + result[0].index);
+      },
+      err => console.log('Error: ', err)
+      );
+  }
 
   constructor(private athletesProvider: AthletesProvider, 
               private navCtrl: NavController, 
@@ -48,8 +54,6 @@ export class AthletePage {
     this.athletesProvider
         .show(this.navParams.get('url'))             
         .subscribe(athlete => {
-                console.log(athlete.data.attributes);
-
                 this.athlete = athlete.data;
              });
   }
@@ -57,7 +61,6 @@ export class AthletePage {
   
 
   ionViewDidLoad() {
-    let url = this.navParams.get('url'); 
     console.log(this.jsonData);
   }
 
