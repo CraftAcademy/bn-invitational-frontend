@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
@@ -16,18 +16,21 @@ export class AthletesProvider {
   }
   
   // GET athletes/id
-  show(url: any) {
-    return this.http.get(url)
+  show(id: any) {
+    return this.http.get(`${this.apiUrl}/athletes/${id}`)
                     .map((response: Response) => response.json());
 
   }
 
-  update(url, result){
-    let params = {
-      vote: result
-    }
-    return this.http.put(url, params)
-                    .map((response: Response) => response.json());
+  // UPDATE result
+  update(id, result){
+    let headers = new Headers();
+    let body = JSON.stringify({vote: result})
+    headers.append("Accept" , 'application/json');
+    headers.append('Content-Type', 'application/json');
+    let options = new RequestOptions({ headers: headers });
+    return this.http.put(`${this.apiUrl}/athletes/${id}`, body, options)
   }
 
 }
+
