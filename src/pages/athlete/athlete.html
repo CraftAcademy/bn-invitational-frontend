@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Athlete Profile page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ng-container *ngIf="athlete" class="container">
+    <div class="athlete">
+      <h3>{{ athlete.attributes.name }}</h3>
+      <p>{{ athlete.attributes.age }}</p>
+      <p>{{ athlete.attributes.home }}</p>
+      <p>{{ athlete.attributes.starttime }} </p>
+    </div>
+  </ng-container>
+</ion-content>

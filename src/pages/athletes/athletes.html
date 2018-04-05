@@ -1,17 +1,14 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>Athletes</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
-
   <ng-container *ngFor="let athlete of athletes" class="container">
-    <div class="athlete">  
+    <div class="athlete">
       <h3>{{ athlete.attributes.name }}</h3>
+      <button ion-button (click)="launchAthletePage(athlete.attributes.link)">Show profile</button>
     </div>
   </ng-container>
-
 </ion-content>
