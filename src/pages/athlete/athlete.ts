@@ -28,10 +28,6 @@ export class AthletePage {
     ]
   };
 
-  showSelector() {
-    
-  }
-
   selectANumber() {
     this.selector.show({
       title: "1 is BAD 10 is GOOD",
