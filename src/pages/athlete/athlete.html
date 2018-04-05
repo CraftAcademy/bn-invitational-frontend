@@ -12,7 +12,8 @@
       <p>{{ athlete.attributes.home }}</p>
       <p>{{ athlete.attributes.starttime }} </p>
     </div>
-    <ion-list>
+
+    <ion-list *ngIf="votingClosed==false">
       <ion-item>
         <ion-label>Click To Choose Rating</ion-label>
         <ion-select [(ngModel)]="vote" interface="alert" (ionChange)="clickToVote(athlete.id)" cancelText="Cancel" okText="Ok">
@@ -29,7 +30,8 @@
         </ion-select>
       </ion-item>
     </ion-list>
+    
+    <p *ngIf="votingClosed==true">Thank you for voting <3</p>
 
-    <!-- <button *ngIf="vote" ion-button (click)="clickToVote(athlete.id)">Click To Vote</button> -->
   </ng-container>
 </ion-content>
