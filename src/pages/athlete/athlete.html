@@ -9,13 +9,14 @@
 <ion-content padding>
   <ng-container *ngIf="athlete" class="container">
     <div class="athlete">
+      <img src="../../assets/imgs/dummy_profile_image.jpg" alt="" class="img-circle">
       <h3>{{ athlete.attributes.name }}</h3>
-      <p>{{ athlete.attributes.age }}</p>
-      <p>{{ athlete.attributes.home }}</p>
-      <p>{{ athlete.attributes.starttime }} </p>
+      <!-- <p>{{ athlete.attributes.age }}</p> -->
+      <p>Home Mountain / {{ athlete.attributes.home }}</p>
+      <p>Races : {{ athlete.attributes.starttime }} </p>
     </div>
-      
-    <button ion-button (click)="clear()">Clear local storage</button>
+
+    <!-- <button ion-button (click)="clear()">Clear local storage</button> -->
 
     <ion-list *ngIf="votingClosed==false">
       <ion-item>
@@ -34,7 +35,7 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    
+
     <p *ngIf="votingClosed==true">Thank you for voting <3</p>
 
   </ng-container>
