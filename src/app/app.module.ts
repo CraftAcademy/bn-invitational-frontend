@@ -20,7 +20,7 @@ import { AthletesProvider } from '../providers/athletes/athletes';
     HomePage,
     AthletePage,
     AthletesPage,
-    TabsPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
