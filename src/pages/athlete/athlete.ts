@@ -16,11 +16,17 @@ export class AthletePage {
   votingClosed: boolean = false;
   message: any;
   //athleteVotedOn: any = [];
+  theValues: [string];
 
   constructor(private athletesProvider: AthletesProvider, 
               private navCtrl: NavController, 
               private navParams: NavParams,
               private storage: Storage) {
+    this.storage.ready().then(() => {
+      
+        this.loadData();
+      
+    });
 
     this.athletesProvider
         .show(this.navParams.get('athlete_id'))             
@@ -28,24 +34,37 @@ export class AthletePage {
             this.athlete = athlete.data;
           });
     
-    this.checkIfAtheleteIsVotedOn();
-    //this.storage.clear();
+    // this.checkIfAtheleteIsVotedOn();
+    // //this.storage.clear();
   }
 
-  checkIfAtheleteIsVotedOn() {
-    let athlete_id: any = this.navParams.get('athlete_id')
-    this.storage.forEach( (value, key) => {
-      if(value == athlete_id) {
-        this.votingClosed = true;
-       } else {
-        this.votingClosed = false;
-       }
-      // console.log("This is the value", value)
-      // console.log("from the key", key)
-    })
+  // checkIfAtheleteIsVotedOn() {
+  //   let athlete_id: any = this.navParams.get('athlete_id')
+  //   this.storage.forEach( (value, key) => {
+  //     if(value == athlete_id) {
+  //       this.votingClosed = true;
+  //      } else {
+  //       this.votingClosed = false;
+  //      }
+  //     // console.log("This is the value", value)
+  //     // console.log("from the key", key)
+  //   })
+  // }
 
+    addToStorage() {
+      this.storage.get('myValue').then(data => {
+        console.log("Currently: ", data);
+        data.push('new value');
+        console.log("Currently now:", data);
+        this.storage.set("myValue", data);
+      });
+    }
 
-  }
+    loadData() {
+      this.storage.get('myValue').then(data => {
+        this.theValues = data;
+      })
+    }
 
   clickToVote(id) {
     this.athletesProvider
