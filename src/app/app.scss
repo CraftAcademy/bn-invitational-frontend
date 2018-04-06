@@ -15,3 +15,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.tabs .tab-button[aria-selected=true] {
+    color: #fff; /*your  text color */
+    background: #12948e; /* your background color*/
+}
