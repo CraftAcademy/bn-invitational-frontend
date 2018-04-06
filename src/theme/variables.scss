@@ -42,6 +42,7 @@ $colors: (
 );
 
 $toolbar-background: #12948e;
+$navbar-ios-height: 300px;
 
 $tabs-background: color($colors, light);
 $tabs-tab-color-active: color($colors, light);
@@ -49,8 +50,6 @@ $tabs-tab-color-inactive: color($colors, primary);
 $tabs-tab-icon-color: color($colors, primary);
 $tabs-tab-text-color: color($colors, light);
 $tabs-tab-text-color-inactive: color($colors, primary);
-
-
 
 
 // App iOS Variables
