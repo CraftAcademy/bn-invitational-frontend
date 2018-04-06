@@ -12,17 +12,8 @@
       <p>{{ athlete.attributes.home }}</p>
       <p>{{ athlete.attributes.starttime }} </p>
     </div>
-
-    <ion-content>
-      <h3>Testing Storage</h3>
-      <ion-list>
-        <ion-item *ngFor="let item of theValues">
-      {{ item }}
-      </ion-item>
-    </ion-list>
-    <button ion-button (click)="addToStorage()">Add to Storage</button>
-    <button ion-button (click)="loadData()">Load data / Refresh</button>
-    </ion-content>
+      
+    <button ion-button (click)="clear()">Clear local storage</button>
 
     <ion-list *ngIf="votingClosed==false">
       <ion-item>
