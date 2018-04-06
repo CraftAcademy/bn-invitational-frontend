@@ -13,7 +13,7 @@ export class AthletePage {
 
   athlete: any;
   vote: number = 0;
-  votingClosed: boolean;
+  votingClosed: boolean = false
   message: any;
   //athleteVotedOn: any = [];
   theValues: [string];
@@ -28,6 +28,7 @@ export class AthletePage {
               if(data == null) {
                 this.storage.set('myValue', ['Initial value']);
               } else {
+                //console.log(data)
                 this.checkIfAtheleteIsVotedOn(data);
               }
             })
@@ -44,14 +45,20 @@ export class AthletePage {
   }
 
   checkIfAtheleteIsVotedOn(data) {
-    let athlete_id: any = this.navParams.get('athlete_id')
-    data.forEach( (value) => {
-      if(value == athlete_id) {
+    let athleteId: any = this.navParams.get('athlete_id')
+    for(let i:number = 0; i < data.length; i++){
+      if(i == athleteId) {
+        console.log(i)
+      console.log(athleteId)
         this.votingClosed = true;
+        break;
        } else {
         this.votingClosed = false;
        }
-    });
+    }
+    // data.forEach( (value) => {
+    
+    // });
   }
 
     clear() {
