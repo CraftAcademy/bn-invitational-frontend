@@ -13,7 +13,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AthletesProvider } from '../providers/athletes/athletes';
-import { WheelSelector } from '@ionic-native/wheel-selector';
 
 @NgModule({
   declarations: [
