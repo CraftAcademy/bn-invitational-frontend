@@ -14,5 +14,28 @@
       <p>{{ athlete.attributes.home }}</p>
       <p>{{ athlete.attributes.starttime }} </p>
     </div>
+      
+    <button ion-button (click)="clear()">Clear local storage</button>
+
+    <ion-list *ngIf="votingClosed==false">
+      <ion-item>
+        <ion-label>Click To Choose Rating</ion-label>
+        <ion-select [(ngModel)]="vote" interface="alert" (ionChange)="clickToVote(athlete.id)" cancelText="Cancel" okText="Ok">
+          <ion-option value="1">Give 1 star</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="8">8</ion-option>
+          <ion-option value="9">9</ion-option>
+          <ion-option value="10">10</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    
+    <p *ngIf="votingClosed==true">Thank you for voting <3</p>
+
   </ng-container>
 </ion-content>

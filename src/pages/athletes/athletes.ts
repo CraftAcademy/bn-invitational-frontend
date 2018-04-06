@@ -22,9 +22,8 @@ export class AthletesPage {
              });
   }
 
-    launchAthletePage(url) {
-      let params =  { url: url }
-      this.navCtrl.push(AthletePage, params);
+    launchAthletePage(id) {
+      this.navCtrl.push(AthletePage, { athlete_id: id });
   }
 
 }
