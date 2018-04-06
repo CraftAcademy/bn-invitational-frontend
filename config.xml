@@ -86,7 +86,6 @@
         <variable name="CHANNEL_NAME" value="Master" />
         <variable name="UPDATE_METHOD" value="background" />
     </plugin>
-    <plugin name="cordova-wheel-selector-plugin" spec="^1.1.0" />
     <plugin name="cordova-plugin-http" spec="^1.2.0" />
     <engine name="browser" spec="5.0.3" />
 </widget>
