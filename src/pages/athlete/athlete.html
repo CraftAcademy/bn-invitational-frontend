@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Athlete Profile page</ion-title>
+    <ion-title *ngIf="athlete">{{ athlete.attributes.name }}</ion-title>
   </ion-navbar>
 </ion-header>
 
