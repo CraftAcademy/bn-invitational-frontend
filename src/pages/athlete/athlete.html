@@ -13,6 +13,17 @@
       <p>{{ athlete.attributes.starttime }} </p>
     </div>
 
+    <ion-content>
+      <h3>Testing Storage</h3>
+      <ion-list>
+        <ion-item *ngFor="let item of theValues">
+      {{ item }}
+      </ion-item>
+    </ion-list>
+    <button ion-button (click)="addToStorage()">Add to Storage</button>
+    <button ion-button (click)="loadData()">Load data / Refresh</button>
+    </ion-content>
+
     <ion-list *ngIf="votingClosed==false">
       <ion-item>
         <ion-label>Click To Choose Rating</ion-label>
