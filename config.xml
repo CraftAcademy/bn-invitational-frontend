@@ -22,6 +22,7 @@
     <preference name="FadeSplashScreen" value="true" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="orientation" value="portrait" />
+    <preference name="StatusBarBackgroundColor" value="#FFFFFF" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
@@ -90,5 +91,6 @@
         <variable name="UPDATE_METHOD" value="background" />
     </plugin>
     <plugin name="cordova-plugin-http" spec="^1.2.0" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <engine name="browser" spec="5.0.3" />
 </widget>

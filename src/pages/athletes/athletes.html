@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      <img src="././assets/imgs/logo-large.png" style="width: 300px;">
+      <img src="././assets/imgs/logo-large.png">
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,7 +10,7 @@
   <ion-list>
     <ion-item *ngFor="let athlete of athletes" (click)="launchAthletePage(athlete.id)">
       <ion-avatar item-start>
-        <img src="../../assets/imgs/thumbnail-totoro.png">
+        <img src="././assets/imgs/thumbnail-totoro.png">
       </ion-avatar>
       <h2>{{ athlete.attributes.name }}</h2>
       <p>{{ athlete.attributes.home }}</p>

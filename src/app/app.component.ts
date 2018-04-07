@@ -15,11 +15,11 @@ export class MyApp {
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController) {
     platform.ready().then(() => {
       
-      statusBar.styleDefault();
-
       let splash = modalCtrl.create(SplashPage);
       splash.present();
       // splashScreen.hide();
     });
+
   }
+  
 }
