@@ -1,19 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      <img src="../../assets/imgs/bn-inivte-logo.png">
+      <img src="././assets/imgs/logo-large.png" style="width: 300px;">
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-    <ion-list>
-      <ion-item *ngFor="let athlete of athletes" (click)="launchAthletePage(athlete.id)">
-        <ion-avatar item-start>
-          <img src="../../assets/imgs/thumbnail-totoro.png">
-        </ion-avatar>
-        <h2>{{ athlete.attributes.name }}</h2>
-        <p>{{ athlete.attributes.home }}</p>
-      </ion-item>  
-    </ion-list>
-  </ion-content>
+  <ion-list>
+    <ion-item *ngFor="let athlete of athletes" (click)="launchAthletePage(athlete.id)">
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/thumbnail-totoro.png">
+      </ion-avatar>
+      <h2>{{ athlete.attributes.name }}</h2>
+      <p>{{ athlete.attributes.home }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
