@@ -19,8 +19,8 @@
     <!-- <button ion-button (click)="clear()">Clear local storage</button> -->
 
     <ion-list *ngIf="votingClosed==false">
-      <ion-item>
-        <ion-label>Click To Choose Rating</ion-label>
+      <ion-item class="vote">
+        <ion-label color="light">Click To Choose A Rating</ion-label>
         <ion-select [(ngModel)]="vote" interface="alert" (ionChange)="clickToVote(athlete.id)" cancelText="Cancel" okText="Ok">
           <ion-option value="1">Give 1 star</ion-option>
           <ion-option value="2">2</ion-option>

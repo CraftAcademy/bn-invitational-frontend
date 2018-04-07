@@ -5,6 +5,15 @@ page-athlete {
   .img-circle {
     border-radius: 50%;
     height: 60%;
-}
-
+    padding-top: 20%;
+  }
+  .athlete{
+    background-image: url("../../assets/imgs/mountain_image_crop.png");
+    background-repeat:no-repeat;
+    background-size:100% 50%;
+  }
+  .vote{
+    background-color: #12948e;
+    text-align: center;
+  }
 }
