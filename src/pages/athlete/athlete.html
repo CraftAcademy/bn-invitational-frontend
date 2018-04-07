@@ -16,9 +16,13 @@
       <p>Races : {{ athlete.attributes.starttime }} </p>
     </div>
 
-    <!-- <button ion-button (click)="clear()">Clear local storage</button> -->
 
-    <ion-list *ngIf="votingClosed==false">
+  <!-- <button ion-button (click)="clear()">Clear local storage</button> -->
+    <button ion-button full (click)="createAlert()">Click To Choose A Rating</button>
+
+
+
+    <!-- <ion-list *ngIf="votingClosed==false">
       <ion-item class="vote">
         <ion-label color="light">Click To Choose A Rating</ion-label>
         <ion-select [(ngModel)]="vote" interface="alert" (ionChange)="clickToVote(athlete.id)" cancelText="Cancel" okText="Ok">
@@ -34,7 +38,7 @@
           <ion-option value="10">10</ion-option>
         </ion-select>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 
     <p *ngIf="votingClosed==true">Thank you for voting <3</p>
 

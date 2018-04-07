@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AthletesPage } from '../athletes/athletes';
 import { AthletesProvider } from '../../providers/athletes/athletes';
 import { Storage } from '@ionic/storage';
@@ -8,6 +8,7 @@ import { Storage } from '@ionic/storage';
 @Component({
   selector: 'page-athlete',
   templateUrl: 'athlete.html',
+
 })
 export class AthletePage {
 
@@ -16,9 +17,12 @@ export class AthletePage {
   votingClosed: boolean = false
   message: any;
   theValues: [string];
+  testRadioOpen: boolean;
+  testRadioResult;
 
   constructor(private athletesProvider: AthletesProvider,
     private navCtrl: NavController,
+    private alertCtrl: AlertController,
     private navParams: NavParams,
     private storage: Storage) {
 
@@ -71,6 +75,83 @@ export class AthletePage {
       })
   }
 
-  ionViewDidLoad() { }
+  // createAlert() {
+  //   this.alertCtrl.create({
+  //     title: "this is a title",
+  //     message: "message"
+  //   }).present();
+  // }
 
+   createAlert(){this.alertCtrl.create({
+          title: 'Rate',
+          inputs: [
+            {
+              type: 'radio',
+              label: '1',
+              value: '1'
+            },
+            {
+              type: 'radio',
+              label: '2',
+              value: '2'
+            },
+            {
+              type: 'radio',
+              label: '3',
+              value: '3'
+            },
+            {
+              type: 'radio',
+              label: '4',
+              value: '4'
+            },
+            {
+              type: 'radio',
+              label: '5',
+              value: '5'
+            },
+            {
+              type: 'radio',
+              label: '6',
+              value: '6'
+            },
+            {
+              type: 'radio',
+              label: '7',
+              value: '7'
+            },
+            {
+              type: 'radio',
+              label: '8',
+              value: '8'
+            },
+            {
+              type: 'radio',
+              label: '9',
+              value: '9'
+            },
+            {
+              type: 'radio',
+              label: '10',
+              value: '10'
+            },
+          ],
+          buttons: [
+            {
+              text: 'Cancel',
+              role: 'cancel',
+              handler: () => {
+                console.log('Cancel clicked');
+              }
+            },
+            {
+              text: 'OK',
+              handler: () => {
+                console.log('OK clicked: ' );
+                // I NEED TO GET THE VALUE OF THE SELECTED RADIO BUTTON HERE
+                }
+              }
+          ]
+        }).present();
+      }
 }
