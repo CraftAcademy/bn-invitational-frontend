@@ -14,8 +14,7 @@ export class AthletePage {
 
   athlete: any;
   vote: number = 0;
-  votingClosed: boolean = false;
-  // hasVoted: boolean = false;
+  hasVoted: boolean = false;
   message: any;
   theValues: [string];
 
@@ -48,12 +47,10 @@ export class AthletePage {
     let athleteId: any = this.navParams.get('athlete_id')
     for (let i: number = 0; i < data.length; i++) {
       if (data[i] == athleteId) {
-        // this.hasVoted = true;
-        this.votingClosed = true;
+        this.hasVoted = true;
       break;
       } else {
-          // this.hasVoted = false;
-          this.votingClosed = false;
+          this.hasVoted = false;
       }
     }
   }
@@ -139,8 +136,7 @@ export class AthletePage {
   clickToVote(id, vote) {
     this.athletesProvider
       .update(id, vote).subscribe(() => {
-        // this.hasVoted = true;
-        this.votingClosed = true;
+        this.hasVoted = true;
         this.addToStorage();
       })
   }
