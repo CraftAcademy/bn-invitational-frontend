@@ -75,77 +75,77 @@ export class AthletePage {
       })
   }
 
-   chooseRating(id){this.alertCtrl.create({
-          title: 'Rate',
-          inputs: [
-            {
-              type: 'radio',
-              label: '1',
-              value: '1'
-            },
-            {
-              type: 'radio',
-              label: '2',
-              value: '2'
-            },
-            {
-              type: 'radio',
-              label: '3',
-              value: '3'
-            },
-            {
-              type: 'radio',
-              label: '4',
-              value: '4'
-            },
-            {
-              type: 'radio',
-              label: '5',
-              value: '5'
-            },
-            {
-              type: 'radio',
-              label: '6',
-              value: '6'
-            },
-            {
-              type: 'radio',
-              label: '7',
-              value: '7'
-            },
-            {
-              type: 'radio',
-              label: '8',
-              value: '8'
-            },
-            {
-              type: 'radio',
-              label: '9',
-              value: '9'
-            },
-            {
-              type: 'radio',
-              label: '10',
-              value: '10'
-            },
-          ],
-          buttons: [
-            {
-              text: 'Cancel',
-              role: 'cancel',
-              handler: () => {
-                console.log('Cancel clicked');
-              }
-            },
-            {
-              text: 'Vote',
-              handler: () => {
-                // I NEED TO GET THE VALUE OF THE SELECTED RADIO BUTTON HERE
-                this.clickToVote(id)
-                console.log('OK clicked: ', id );
-                }
-              }
-          ]
-        }).present();
-      }
+  chooseRating(id) {
+    this.alertCtrl.create({
+      title: 'Rate',
+      inputs: [
+        {
+          type: 'radio',
+          label: '1',
+          value: '1'
+        },
+        {
+          type: 'radio',
+          label: '2',
+          value: '2'
+        },
+        {
+          type: 'radio',
+          label: '3',
+          value: '3'
+        },
+        {
+          type: 'radio',
+          label: '4',
+          value: '4'
+        },
+        {
+          type: 'radio',
+          label: '5',
+          value: '5'
+        },
+        {
+          type: 'radio',
+          label: '6',
+          value: '6'
+        },
+        {
+          type: 'radio',
+          label: '7',
+          value: '7'
+        },
+        {
+          type: 'radio',
+          label: '8',
+          value: '8'
+        },
+        {
+          type: 'radio',
+          label: '9',
+          value: '9'
+        },
+        {
+          type: 'radio',
+          label: '10',
+          value: '10'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Vote',
+          handler: () => {
+            this.clickToVote(id)
+            console.log('OK clicked: ', id);
+          }
+        }
+      ]
+    }).present();
+  }
 }

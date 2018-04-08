@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-        <img src="../../assets/imgs/bn-inivte-logo.png">
+        <img src="././assets/imgs/bn-inivte-logo.png">
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,17 +9,36 @@
 <ion-content>
   <ng-container *ngIf="athlete">
     <div class="athlete">
-      <img src="../../assets/imgs/dummy_profile_image.jpg" class="img-circle">
-      <h2>{{ athlete.attributes.name }}</h2>
+      <img src="././assets/imgs/dummy_profile_image.jpg" class="img-circle">
+      <h2>{{ athlete.attributes.name }} ({{ athlete.attributes.age }})</h2>
       <!-- <p>{{ athlete.attributes.age }}</p> -->
       <p>Home Mountain / {{ athlete.attributes.home }}</p>
-      <p>Races : {{ athlete.attributes.starttime }} </p>
+      <p></p>
     </div>
 
-    <!-- <button ion-button full (click)="clear()">Clear local storage</button> -->
-    <button *ngIf="votingClosed==false" ion-button full (click)="chooseRating(athlete.id)">Click To Choose A Rating</button>
+    <p style="width: 100%; text-align: center;" (click)="clear()">Clear local storage</p>
+    
+    <!-- <button class="voteBtn raceTimeBtn" *ngIf="votingClosed==false" ion-button full>
+      <ion-icon ios="ios-time-outline" md="md-time"></ion-icon>
+      <h1>RACES : {{ athlete.attributes.starttime }} </h1>
+    </button>
 
-    <p *ngIf="votingClosed==true">Thank you for voting <3</p>
+    <button class="voteBtn raceTimeBtn notActive" *ngIf="votingClosed==true" ion-button full>
+        <ion-icon ios="ios-time-outline" md="md-time"></ion-icon>
+        <h1>RACES : {{ athlete.attributes.starttime }} </h1>
+      </button> -->
+
+    <button *ngIf="votingClosed==false && athlete.attributes.has_raced==false" ion-button full class="voteBtn active" color="danger" (click)="chooseRating(athlete.id)">
+      <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
+      <h1>VOTE NOW !</h1>
+    </button>
+
+    <button class="voteBtn thankYou" color="thankYou" *ngIf="votingClosed==true" ion-button full>
+      <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+      <h1>THANK YOU !</h1>
+    </button>
+
+    <!-- <p *ngIf="votingClosed==true">Thank you for voting <3</p> -->
 
   </ng-container>
 </ion-content>

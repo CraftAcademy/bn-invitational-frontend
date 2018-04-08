@@ -9,5 +9,6 @@ import { AthletePage } from './athlete';
   imports: [
     IonicPageModule.forChild(AthletePage),
   ],
+  
 })
 export class AthletePageModule {}
