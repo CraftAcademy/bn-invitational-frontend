@@ -14,11 +14,10 @@ export class AthletePage {
 
   athlete: any;
   vote: number = 0;
-  votingClosed: boolean = false
+  votingClosed: boolean = false;
   message: any;
   theValues: [string];
-  testRadioOpen: boolean;
-  testRadioResult;
+  hasVoted: boolean = false;
 
   constructor(private athletesProvider: AthletesProvider,
     private navCtrl: NavController,
