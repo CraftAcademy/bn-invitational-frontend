@@ -7,14 +7,18 @@ page-athlete {
   }
   .athlete {
     text-align: center;
-    background-image: url("./../assets/imgs/mountain_image_crop.png");
+    background-image: url("./../assets/imgs/flat-mouintan-bg.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 0% -550%; 
+    background-position: 0% -100%; 
+  }
+  
+  .athlete h1, h2, p {
+    color: #666666;
   }
 
-  .athlete h2, p {
-    color: #666666;
+  .athlete h1 {
+    margin-bottom: -15px;
   }
 
   .athlete p { font-size: 2.3vh }
@@ -27,9 +31,8 @@ page-athlete {
 
   .voteBtn {
     padding: 15% 10%;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 15%;
+    position: absolute;
+    bottom: -5px;
   }
 
   .voteBtn h1 {
@@ -45,10 +48,6 @@ page-athlete {
     background-color: #fff;
     color: #eee;
     border-top: 1px solid #eee; 
-  }
-
-  .raceTimeBtn {
-    margin-bottom: 15%;
   }
   
 }

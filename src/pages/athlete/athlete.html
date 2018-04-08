@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
       <ion-title>
-        <img src="././assets/imgs/logo-large.png">
+        <img src="././assets/imgs/logo-large.png" (click)="clear()">
       </ion-title>
     </ion-navbar>
   </ion-header>
@@ -12,13 +12,8 @@
         <img src="././assets/imgs/dummy_profile_image.jpg" class="img-circle">
         <h2>{{ athlete.attributes.name }} ({{ athlete.attributes.age }})</h2>
         <p>Home Mountain / {{ athlete.attributes.home }}</p>
+        <h1>RACES : {{ athlete.attributes.starttime }}</h1>
       </div>
-  
-      <p style="width: 100%; text-align: center;" (click)="clear()">Clear local storage</p>
-
-      <h1 style="width: 100%; text-align: center;">
-        RACES : {{ athlete.attributes.starttime }}
-      </h1>
   
       <button *ngIf="hasVoted==true && athlete.attributes.hasraced==false" ion-button full class="voteBtn notActive" color="disabled">
         <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
