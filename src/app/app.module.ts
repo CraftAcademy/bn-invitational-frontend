@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { AthletePage } from '../pages/athlete/athlete';
 import { AthletesPage } from '../pages/athletes/athletes';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SplashPage } from '../pages/splash/splash';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +21,8 @@ import { AthletesProvider } from '../providers/athletes/athletes';
     HomePage,
     AthletePage,
     AthletesPage,
-    TabsPage
+    TabsPage,
+    SplashPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { AthletesProvider } from '../providers/athletes/athletes';
     HomePage,
     AthletePage,
     AthletesPage,
-    TabsPage
+    TabsPage,
+    SplashPage
   ],
   providers: [
     StatusBar,
