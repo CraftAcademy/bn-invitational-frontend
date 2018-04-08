@@ -17,7 +17,6 @@ export class MyApp {
       
       let splash = modalCtrl.create(SplashPage);
       splash.present();
-      // splashScreen.hide();
     });
 
   }
