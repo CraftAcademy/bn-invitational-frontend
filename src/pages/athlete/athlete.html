@@ -16,29 +16,8 @@
       <p>Races : {{ athlete.attributes.starttime }} </p>
     </div>
 
-
-  <!-- <button ion-button (click)="clear()">Clear local storage</button> -->
-    <button ion-button full (click)="createAlert()">Click To Choose A Rating</button>
-
-
-
-    <!-- <ion-list *ngIf="votingClosed==false">
-      <ion-item class="vote">
-        <ion-label color="light">Click To Choose A Rating</ion-label>
-        <ion-select [(ngModel)]="vote" interface="alert" (ionChange)="clickToVote(athlete.id)" cancelText="Cancel" okText="Ok">
-          <ion-option value="1">Give 1 star</ion-option>
-          <ion-option value="2">2</ion-option>
-          <ion-option value="3">3</ion-option>
-          <ion-option value="4">4</ion-option>
-          <ion-option value="5">5</ion-option>
-          <ion-option value="6">6</ion-option>
-          <ion-option value="7">7</ion-option>
-          <ion-option value="8">8</ion-option>
-          <ion-option value="9">9</ion-option>
-          <ion-option value="10">10</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-list> -->
+    <button ion-button full (click)="clear()">Clear local storage</button>
+    <button *ngIf="votingClosed==false" ion-button full (click)="chooseRating(athlete.id)">Click To Choose A Rating</button>
 
     <p *ngIf="votingClosed==true">Thank you for voting <3</p>
 

@@ -75,14 +75,7 @@ export class AthletePage {
       })
   }
 
-  // createAlert() {
-  //   this.alertCtrl.create({
-  //     title: "this is a title",
-  //     message: "message"
-  //   }).present();
-  // }
-
-   createAlert(){this.alertCtrl.create({
+   chooseRating(id){this.alertCtrl.create({
           title: 'Rate',
           inputs: [
             {
@@ -145,10 +138,11 @@ export class AthletePage {
               }
             },
             {
-              text: 'OK',
+              text: 'Vote',
               handler: () => {
-                console.log('OK clicked: ' );
                 // I NEED TO GET THE VALUE OF THE SELECTED RADIO BUTTON HERE
+                this.clickToVote(id)
+                console.log('OK clicked: ', id );
                 }
               }
           ]
