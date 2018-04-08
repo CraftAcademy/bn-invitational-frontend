@@ -6,17 +6,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ng-container *ngIf="athlete" class="container">
+<ion-content>
+  <ng-container *ngIf="athlete">
     <div class="athlete">
-      <img src="../../assets/imgs/dummy_profile_image.jpg" alt="" class="img-circle">
-      <h3>{{ athlete.attributes.name }}</h3>
+      <img src="../../assets/imgs/dummy_profile_image.jpg" class="img-circle">
+      <h2>{{ athlete.attributes.name }}</h2>
       <!-- <p>{{ athlete.attributes.age }}</p> -->
       <p>Home Mountain / {{ athlete.attributes.home }}</p>
       <p>Races : {{ athlete.attributes.starttime }} </p>
     </div>
 
-    <button ion-button full (click)="clear()">Clear local storage</button>
+    <!-- <button ion-button full (click)="clear()">Clear local storage</button> -->
     <button *ngIf="votingClosed==false" ion-button full (click)="chooseRating(athlete.id)">Click To Choose A Rating</button>
 
     <p *ngIf="votingClosed==true">Thank you for voting <3</p>
