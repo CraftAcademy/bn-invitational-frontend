@@ -20,19 +20,8 @@
       <p>hasVoted: {{ hasVoted }}</p> -->
 
       <h1 style="width: 100%; text-align: center;">
-        <ion-icon ios="ios-time-outline" md="md-time"></ion-icon>
         RACES : {{ athlete.attributes.starttime }}
       </h1>
-  
-      <!-- <button class="voteBtn raceTimeBtn" *ngIf="votingClosed==false" ion-button full>
-        <ion-icon ios="ios-time-outline" md="md-time"></ion-icon>
-        <h1>RACES : {{ athlete.attributes.starttime }} </h1>
-      </button>
-  
-      <button class="voteBtn raceTimeBtn notActive" *ngIf="votingClosed==true" ion-button full>
-        <ion-icon ios="ios-time-outline" md="md-time"></ion-icon>
-        <h1>RACES : {{ athlete.attributes.starttime }} </h1>
-      </button> -->
   
       <button *ngIf="hasVoted==true && athlete.attributes.hasraced==false" ion-button full class="voteBtn notActive" color="disabled">
         <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
@@ -53,11 +42,6 @@
         <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
         <h1>VOTING CLOSED !</h1>
       </button>
-  
-      <!-- <button class="voteBtn thankYou" color="thankYou" *ngIf="votingClosed==true" ion-button full>
-        <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
-        <h1>THANK YOU !</h1>
-      </button> -->
   
     </ng-container>
   </ion-content>
