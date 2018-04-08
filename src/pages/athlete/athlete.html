@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-        <img src="../../assets/imgs/bn-inivte-logo.png">
+      <img src="././assets/imgs/logo-large.png">
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -14,7 +14,7 @@
       <p>{{ athlete.attributes.home }}</p>
       <p>{{ athlete.attributes.starttime }} </p>
     </div>
-      
+
     <button ion-button (click)="clear()">Clear local storage</button>
 
     <ion-list *ngIf="votingClosed==false">
@@ -34,8 +34,9 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    
-    <p *ngIf="votingClosed==true">Thank you for voting <3</p>
+
+    <p *ngIf="votingClosed==true">Thank you for voting
+      <3</p>
 
   </ng-container>
 </ion-content>
