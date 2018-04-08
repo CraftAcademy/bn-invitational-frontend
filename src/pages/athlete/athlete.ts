@@ -15,9 +15,9 @@ export class AthletePage {
   athlete: any;
   vote: number = 0;
   votingClosed: boolean = false;
+  // hasVoted: boolean = false;
   message: any;
   theValues: [string];
-  hasVoted: boolean = false;
 
   constructor(private athletesProvider: AthletesProvider,
     private navCtrl: NavController,
@@ -28,8 +28,10 @@ export class AthletePage {
     this.storage.ready().then(() => {
       this.storage.get('myValue').then(data => {
         if (data == null) {
+          console.log('DATA IS NULL:', data);
           this.storage.set('myValue', ['Initial value']);
         } else {
+          console.log('DATA IS: ', data);
           this.checkIfAtheleteIsVotedOn(data);
         }
       })
@@ -45,33 +47,19 @@ export class AthletePage {
   checkIfAtheleteIsVotedOn(data) {
     let athleteId: any = this.navParams.get('athlete_id')
     for (let i: number = 0; i < data.length; i++) {
-      if (i == athleteId) {
+      if (data[i] == athleteId) {
+        // this.hasVoted = true;
         this.votingClosed = true;
-        break;
+      break;
       } else {
-        this.votingClosed = false;
+          // this.hasVoted = false;
+          this.votingClosed = false;
       }
     }
   }
 
   clear() {
     this.storage.clear();
-  }
-
-  addToStorage() {
-    let athlete_id: any = this.navParams.get('athlete_id')
-    this.storage.get('myValue').then(data => {
-      data.push(athlete_id);
-      this.storage.set("myValue", data);
-    });
-  }
-
-  clickToVote(id) {
-    this.athletesProvider
-      .update(id, this.vote).subscribe(() => {
-        this.votingClosed = true;
-        this.addToStorage();
-      })
   }
 
   chooseRating(id) {
@@ -139,12 +127,31 @@ export class AthletePage {
         },
         {
           text: 'Vote',
-          handler: () => {
-            this.clickToVote(id)
-            console.log('OK clicked: ', id);
+          handler: vote => {
+            this.clickToVote(id, vote)
+            console.log('OK clicked: ', id, vote);
           }
         }
       ]
     }).present();
   }
+
+  clickToVote(id, vote) {
+    this.athletesProvider
+      .update(id, vote).subscribe(() => {
+        // this.hasVoted = true;
+        this.votingClosed = true;
+        this.addToStorage();
+      })
+  }
+
+  addToStorage() {
+    let athlete_id: any = this.navParams.get('athlete_id')
+    this.storage.get('myValue').then(data => {
+      data.push(athlete_id);
+      this.storage.set("myValue", data);
+    });
+  }
+
 }
+
