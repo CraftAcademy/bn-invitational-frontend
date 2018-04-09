@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { resolvePtr } from 'dns';
 import { ResultsPage } from '../results/results';
+import { AthletesPage } from '../athletes/athletes';
 import { ResultsProvider } from '../../providers/results/results';
 
 @IonicPage()
@@ -16,9 +17,13 @@ export class ResultsPage {
 
   constructor(private resultsProvider: ResultsProvider, private navCtrl: NavController) {
     this.resultsProvider
-      .all()
-      .subscribe(results => {
-        this.results = results.data;
-      });
+        .all()
+        .subscribe(results => {
+            this.results = results.data;
+        });
     }
+
+//     launchResultsPage(id) {
+//       this.navCtrl.push(ResultsPage, { athlete_id: id });
+// }
 }

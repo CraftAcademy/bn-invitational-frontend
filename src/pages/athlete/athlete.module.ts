@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AthletePage } from './athlete';
-import { ResultsPage } from './results'
+import { ResultsPage } from '../results/results';
 
 @NgModule({
   declarations: [

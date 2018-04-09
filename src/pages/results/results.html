@@ -8,10 +8,10 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let results of results" (click)="launchResultsPage(athlete.id)">
-      <h2>{{ results.attributes.athlete_name }}</h2>
-      <p>{{ results.attributes.number_of_votes }}</p>
-      <p>{{ results.attributes.score }}</p>
+    <ion-item *ngFor="let results of results" (click)="launchResultsPage(results.id)">
+      <!-- <h2>{{ athlete.attributes.name   }}</h2>
+      <h2>{{ results.attributes.number_of_votes }}</h2> -->
+      <h2>{{ results.type }}</h2>
     </ion-item>
   </ion-list>
 </ion-content>
