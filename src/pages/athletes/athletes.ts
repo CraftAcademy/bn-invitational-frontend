@@ -16,7 +16,7 @@ export class AthletesPage {
 
   constructor(private athletesProvider: AthletesProvider, private navCtrl: NavController) {
     this.athletesProvider
-        .all()            
+        .all()
         .subscribe(athletes => {
                 this.athletes = athletes.data;
              });

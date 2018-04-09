@@ -17,7 +17,7 @@ export class AthletePage {
   hasVoted: boolean = false;
   message: any;
   theValues: [string];
-  
+
   constructor(private athletesProvider: AthletesProvider,
     private navCtrl: NavController,
     private alertCtrl: AlertController,
@@ -148,4 +148,3 @@ export class AthletePage {
   }
 
 }
-
