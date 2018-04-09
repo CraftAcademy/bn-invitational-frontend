@@ -14,8 +14,8 @@ export class ResultsPage {
 
   results: any[]
 
-  constructor(private athletesProvider: AthletesProvider, private navCtrl: NavController) {
-    this.ResultsProvider
+  constructor(private resultsProvider: ResultsProvider, private navCtrl: NavController) {
+    this.resultsProvider
       .all()
       .subscribe(results => {
         this.results = results.data;

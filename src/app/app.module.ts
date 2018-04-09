@@ -8,6 +8,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HomePage } from '../pages/home/home';
 import { AthletePage } from '../pages/athlete/athlete';
 import { AthletesPage } from '../pages/athletes/athletes';
+import { ResultsPage } from '../pages/results/results';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SplashPage } from '../pages/splash/splash';
 
@@ -22,6 +23,7 @@ import { ResultsProvider } from '../providers/results/results';
     HomePage,
     AthletePage,
     AthletesPage,
+    ResultsPage,
     TabsPage,
     SplashPage
   ],
@@ -37,6 +39,7 @@ import { ResultsProvider } from '../providers/results/results';
     HomePage,
     AthletePage,
     AthletesPage,
+    ResultsPage,
     TabsPage,
     SplashPage
   ],
