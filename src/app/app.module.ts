@@ -14,6 +14,7 @@ import { SplashPage } from '../pages/splash/splash';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AthletesProvider } from '../providers/athletes/athletes';
+import { ResultsProvider } from '../providers/results/results';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AthletesProvider } from '../providers/athletes/athletes';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AthletesProvider
+    AthletesProvider,
+    ResultsProvider
   ]
 })
 export class AppModule {}

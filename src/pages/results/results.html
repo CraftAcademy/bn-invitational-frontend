@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img src="././assets/imgs/logo-large.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let results of results" (click)="launchResultsPage(athlete.id)">
+      <h2>{{ results.attributes.athlete_name }}</h2>
+      <p>{{ results.attributes.number_of_votes }}</p>
+      <p>{{ results.attributes.score }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
