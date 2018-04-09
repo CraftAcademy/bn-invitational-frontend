@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AthletesPage } from '../athletes/athletes';
 import { AthletesProvider } from '../../providers/athletes/athletes';
 import { Storage } from '@ionic/storage';
@@ -8,17 +8,19 @@ import { Storage } from '@ionic/storage';
 @Component({
   selector: 'page-athlete',
   templateUrl: 'athlete.html',
+
 })
 export class AthletePage {
 
   athlete: any;
   vote: number = 0;
-  votingClosed: boolean = false
+  hasVoted: boolean = false;
   message: any;
   theValues: [string];
-
+  
   constructor(private athletesProvider: AthletesProvider,
     private navCtrl: NavController,
+    private alertCtrl: AlertController,
     private navParams: NavParams,
     private storage: Storage) {
 
@@ -42,17 +44,99 @@ export class AthletePage {
   checkIfAtheleteIsVotedOn(data) {
     let athleteId: any = this.navParams.get('athlete_id')
     for (let i: number = 0; i < data.length; i++) {
-      if (i == athleteId) {
-        this.votingClosed = true;
-        break;
+      if (data[i] == athleteId) {
+        this.hasVoted = true;
+      break;
       } else {
-        this.votingClosed = false;
+          this.hasVoted = false;
       }
     }
   }
 
   clear() {
     this.storage.clear();
+  }
+
+  chooseRating(id) {
+    this.alertCtrl.create({
+      title: 'Rate',
+      inputs: [
+        {
+          type: 'radio',
+          label: '1',
+          value: '1'
+        },
+        {
+          type: 'radio',
+          label: '2',
+          value: '2'
+        },
+        {
+          type: 'radio',
+          label: '3',
+          value: '3'
+        },
+        {
+          type: 'radio',
+          label: '4',
+          value: '4'
+        },
+        {
+          type: 'radio',
+          label: '5',
+          value: '5'
+        },
+        {
+          type: 'radio',
+          label: '6',
+          value: '6'
+        },
+        {
+          type: 'radio',
+          label: '7',
+          value: '7'
+        },
+        {
+          type: 'radio',
+          label: '8',
+          value: '8'
+        },
+        {
+          type: 'radio',
+          label: '9',
+          value: '9'
+        },
+        {
+          type: 'radio',
+          label: '10',
+          value: '10'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Vote',
+          handler: vote => {
+            this.clickToVote(id, vote)
+            console.log('OK clicked: ', id, vote);
+          }
+        }
+      ]
+    }).present();
+  }
+
+  clickToVote(id, vote) {
+    this.athletesProvider
+      .update(id, vote).subscribe(() => {
+        this.hasVoted = true;
+        this.addToStorage();
+      })
   }
 
   addToStorage() {
@@ -63,14 +147,5 @@ export class AthletePage {
     });
   }
 
-  clickToVote(id) {
-    this.athletesProvider
-      .update(id, this.vote).subscribe(() => {
-        this.votingClosed = true;
-        this.addToStorage();
-      })
-  }
-
-  ionViewDidLoad() { }
-
 }
+
