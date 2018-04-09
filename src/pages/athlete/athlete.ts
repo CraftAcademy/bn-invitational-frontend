@@ -27,10 +27,8 @@ export class AthletePage {
     this.storage.ready().then(() => {
       this.storage.get('myValue').then(data => {
         if (data == null) {
-          console.log('DATA IS NULL:', data);
           this.storage.set('myValue', ['Initial value']);
         } else {
-          console.log('DATA IS: ', data);
           this.checkIfAtheleteIsVotedOn(data);
         }
       })
