@@ -15,12 +15,12 @@
         <h1>RACES : {{ athlete.attributes.starttime }}</h1>
       </div>
   
-      <button *ngIf="hasVoted==true && athlete.attributes.hasraced==false" ion-button full class="voteBtn notActive" color="disabled">
+      <button *ngIf="hasVoted==false && athlete.attributes.hasraced==false && athlete.attributes.votingopen==false" ion-button full class="voteBtn notActive" color="disabled">
         <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
         <h1>VOTING NOT OPEN !</h1>
       </button>
   
-      <button *ngIf="hasVoted==false && athlete.attributes.hasraced==false" ion-button full class="voteBtn active" color="danger" (click)="chooseRating(athlete.id)">
+      <button *ngIf="hasVoted==false && athlete.attributes.hasraced==false && athlete.attributes.votingopen==true" ion-button full class="voteBtn active" color="danger" (click)="chooseRating(athlete.id)">
         <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
         <h1>VOTE NOW !</h1>
       </button>
@@ -30,7 +30,7 @@
         <h1>THANK YOU !</h1>
       </button>
   
-      <button *ngIf="hasVoted==false && athlete.attributes.hasraced==true" ion-button full class="voteBtn notActive" color="disabled">
+      <button *ngIf="hasVoted==false && athlete.attributes.hasraced==true && athlete.attributes.votingopen==false" ion-button full class="voteBtn notActive" color="disabled">
         <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
         <h1>VOTING CLOSED !</h1>
       </button>
