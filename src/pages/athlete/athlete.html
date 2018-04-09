@@ -9,7 +9,7 @@
   <ion-content>
     <ng-container *ngIf="athlete">
       <div class="athlete">
-        <img src="././assets/imgs/dummy_profile_image.jpg" class="img-circle">
+        <img src="{{ athlete.attributes.image }}" class="img-circle">
         <h2>{{ athlete.attributes.name }} ({{ athlete.attributes.age }})</h2>
         <p>Home Mountain / {{ athlete.attributes.home }}</p>
         <h1>RACES : {{ athlete.attributes.starttime }}</h1>
