@@ -21,7 +21,7 @@
       <h5> Insufficient Scores </h5>
       <ion-item *ngFor="let result of invalidResults">
         <h1 item-start class="x"> X </h1>
-        <h2>{{ result.attributes.athletename }}</h2>
+        <h6>{{ result.attributes.athletename }}</h6>
         <p>Final score: <strong class="totalscore">{{ result.attributes.score }}</strong></p>
         <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
