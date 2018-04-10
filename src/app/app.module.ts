@@ -11,6 +11,7 @@ import { AthletesPage } from '../pages/athletes/athletes';
 import { ResultsPage } from '../pages/results/results';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SplashPage } from '../pages/splash/splash';
+import { OneSignal } from '@ionic-native/onesignal';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -48,7 +49,8 @@ import { ResultsProvider } from '../providers/results/results';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AthletesProvider,
-    ResultsProvider
+    ResultsProvider,
+    OneSignal
   ]
 })
 export class AppModule {}
