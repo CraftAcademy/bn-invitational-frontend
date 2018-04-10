@@ -10,11 +10,9 @@
   <div class="results">
     <ion-list>
       <h1>Final standings</h1>
-      <ion-item *ngFor="let result of validResults">
-        <ion-icon item-start
-        name="medal"></ion-icon>
+      <ion-item *ngFor="let result of validResults; let i = index" [attr.data-index]="i">
+        <h1 item-start> {{ i + 1 }} </h1>
         <h2>{{ result.attributes.athletename }}</h2>
-        <h2>{{ i }}</h2>
         <p>Final score: <strong>{{ result.attributes.score }}</strong></p>
         <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
