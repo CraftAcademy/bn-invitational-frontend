@@ -23,9 +23,9 @@ export class MyApp {
       
       let splash = modalCtrl.create(SplashPage);
       splash.present();
-      // if(platform.is('cordova')) {
+      if(platform.is('cordova')) {
         this.setupPush();
-      // }
+      }
     });
 
   }
