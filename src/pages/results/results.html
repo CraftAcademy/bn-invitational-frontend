@@ -8,7 +8,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let results of results" (click)="launchResultsPage(athlete.id)">
+    <ion-item *ngFor="let results of results">
       <h2>{{ results.attributes.athletename }}</h2>
       <p>{{ results.attributes.numberofvotes }}</p>
       <p>{{ results.attributes.score }}</p>

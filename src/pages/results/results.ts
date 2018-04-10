@@ -17,6 +17,10 @@ export class ResultsPage {
     this.resultsProvider
         .all()
         .subscribe(results => {
+
+          //for( var i:number = 0; i < result.data; i++) {
+        //  if (results.data[i].vailidscore == true )
+        //}
             this.results = results.data;
         });
     }
