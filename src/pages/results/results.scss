@@ -1,61 +1,52 @@
 page-results {
-
   .results h1 {
     text-align: center;
   }
 
-  .results p {
-    // text-align: center;
-  }
-
-  .results h2{
-    // text-align: center;
-
-  }
-
-
-  .results h3{
+  .results h3 {
     font-size: 3.0vh;
     color: #666666;
   }
 
-  .results h4{
+  .results h4 {
     font-size: 2.5vh;
     color: #666666;
   }
 
-  .results h5{
+  .results h5 {
     font-size: 3.0vh;
     text-align: center;
   }
 
   .item-md ion-icon {
-      font-size: 10.0vh;
+    font-size: 10.0vh;
   }
-  .number{
+
+  .number {
     background: #12948e;
-  border-radius: 0.8em;
-  -moz-border-radius: 0.8em;
-  -webkit-border-radius: 0.8em;
-  color: #ffffff;
-  display: inline-block;
-  font-weight: bold;
-  line-height: 1.6em;
-  margin-right: 5px;
-  text-align: center;
-  width: 1.6em;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 5px;
+    text-align: center;
+    width: 1.6em;
   }
-.x{
-  background: #ff689d;
-border-radius: 0.8em;
--moz-border-radius: 0.8em;
--webkit-border-radius: 0.8em;
-color: #ffffff;
-display: inline-block;
-font-weight: bold;
-line-height: 1.6em;
-margin-right: 5px;
-text-align: center;
-width: 1.6em;
-}
+
+  .x {
+    background: #ff689d;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 5px;
+    text-align: center;
+    width: 1.6em;
+  }
 }
