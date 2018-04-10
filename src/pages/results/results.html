@@ -11,15 +11,20 @@
     <ion-list>
       <h1>Final standings</h1>
       <ion-item *ngFor="let result of validResults">
-        <h2>{{ result.attributes.athletename }}</h2><h3>Final Score: <strong>{{ result.attributes.score }}</strong></h3>
-        <h4>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></h4>
+        <ion-icon item-start
+        name="medal"></ion-icon>
+        <h2>{{ result.attributes.athletename }}</h2>
+        <h2>{{ i }}</h2>
+        <p>Final score: <strong>{{ result.attributes.score }}</strong></p>
+        <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
     </ion-list>
     <ion-list>
       <h5> In-sufficient votes</h5>
       <ion-item *ngFor="let result of invalidResults">
-        <h2>{{ result.attributes.athletename }}</h2><h3>Final Score: <strong>{{ result.attributes.score }}</strong></h3>
-        <h4>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></h4>
+        <h2>{{ result.attributes.athletename }}</h2>
+        <p>Final score: <strong>{{ result.attributes.score }}</strong></p>
+        <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
     </ion-list>
   </div>
