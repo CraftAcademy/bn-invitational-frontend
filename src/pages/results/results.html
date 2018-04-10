@@ -11,17 +11,18 @@
     <ion-list>
       <h1>Final standings</h1>
       <ion-item *ngFor="let result of validResults; let i = index" [attr.data-index]="i">
-        <h1 item-start> {{ i + 1 }} </h1>
+        <h1 item-start class="number"> {{ i + 1 }} </h1>
         <h2>{{ result.attributes.athletename }}</h2>
         <p>Final score: <strong>{{ result.attributes.score }}</strong></p>
         <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
     </ion-list>
     <ion-list>
-      <h5> In-sufficient votes</h5>
+      <h5> Insufficient Scores </h5>
       <ion-item *ngFor="let result of invalidResults">
+        <h1 item-start class="x"> X </h1>
         <h2>{{ result.attributes.athletename }}</h2>
-        <p>Final score: <strong>{{ result.attributes.score }}</strong></p>
+        <p>Final score: <strong class="totalscore">{{ result.attributes.score }}</strong></p>
         <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
     </ion-list>
