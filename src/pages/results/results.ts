@@ -27,8 +27,6 @@ export class ResultsPage {
             this.invalidResults.push(results.data[i])
           }
         }
-        console.log(this.validResults)
-        console.log(this.invalidResults)
       }
     )
   }
