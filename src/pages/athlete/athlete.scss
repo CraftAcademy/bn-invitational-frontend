@@ -1,3 +1,53 @@
 page-athlete {
+  
+  .img-circle {
+    border-radius: 50%;
+    margin-top: 10%;
+    width: 55%;
+  }
+  .athlete {
+    text-align: center;
+    background-image: url("./../assets/imgs/flat-mouintan-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0% -100%; 
+  }
+  
+  .athlete h1, h2, p {
+    color: #666666;
+  }
 
+  .athlete h1 {
+    padding-top: 5px;
+  }
+
+  .athlete p { font-size: 2.3vh }
+
+  .voteBtn ion-icon {
+    font-size: 400%;
+    padding-right: 30px;
+    font-weight: 400;
+  }
+
+  .voteBtn {
+    padding: 15% 10%;
+    position: absolute;
+    bottom: -5px;
+  }
+
+  .voteBtn h1 {
+    font-weight: 400;
+  }
+
+  .active:active {
+    background-color: #ff689d;
+    color: #fff;
+  }
+
+  .notActive {
+    background-color: #fff;
+    color: #eee;
+    border-top: 1px solid #eee; 
+  }
+  
 }
