@@ -11,21 +11,25 @@ import { ResultsProvider } from '../../providers/results/results';
 })
 export class ResultsPage {
 
-  results: any[]
+  validResults: any = []
+  invalidResults: any = []
 
   constructor(private resultsProvider: ResultsProvider, private navCtrl: NavController) {
     this.resultsProvider
         .all()
         .subscribe(results => {
 
-          //for( var i:number = 0; i < result.data; i++) {
-        //  if (results.data[i].vailidscore == true )
-        //}
-            this.results = results.data;
-        });
-    }
-
-//     launchResultsPage(id) {
-//       this.navCtrl.push(ResultsPage, { athlete_id: id });
-// }
+      console.log(results.data[0].attributes.validscore)
+       for( var i:number = 0; i < results.data.length; i++) {
+          if (results.data[i].attributes.validscore == true ){
+            this.validResults.push(results.data[i])
+          } else {
+            this.invalidResults.push(results.data[i])
+          }
+        }
+        console.log(this.validResults)
+        console.log(this.invalidResults)
+      }
+    )
+  }
 }

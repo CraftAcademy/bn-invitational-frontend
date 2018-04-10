@@ -8,10 +8,19 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let results of results">
-      <h2>{{ results.attributes.athletename }}</h2>
-      <p>{{ results.attributes.numberofvotes }}</p>
-      <p>{{ results.attributes.score }}</p>
+      <h1> Valid Scores </h1>
+    <ion-item *ngFor="let result of validResults">
+      <h2>{{ result.attributes.athletename }}</h2>
+      <p>{{ result.attributes.numberofvotes }}</p>
+      <p>{{ result.attributes.score }}</p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+      <h1> Invalid Scores </h1>
+    <ion-item *ngFor="let result of invalidResults">
+      <h2>{{ result.attributes.athletename }}</h2>
+      <p>{{ result.attributes.numberofvotes }}</p>
+      <p>{{ result.attributes.score }}</p>
     </ion-item>
   </ion-list>
 </ion-content>
