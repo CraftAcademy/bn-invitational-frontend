@@ -16,10 +16,10 @@ Happy Voting!
 
 ## Technologies
 
-* **Ruby on Rails 5.2** https://http://rubyonrails.org/
-* **Rack-cors** https://github.com/cyu/rack-cors
+* **Inonic - mobile framework** https://ionicframework.com/
 
-### Testing
+
+<!-- ### Testing
 
 * **RSpec** https://github.com/rspec/rspec-rails
 * **Pry** https://github.com/pry/pry
@@ -27,7 +27,7 @@ Happy Voting!
 * **Launchy** https://github.com/copiousfreetime/launchy
 * **Shoulda Matchers** https://github.com/thoughtbot/shoulda-matchers
 * **Coveralls** http://coveralls.io/
-* **Semaphoreci - CI** https://semaphoreci.com/
+* **Semaphoreci - CI** https://semaphoreci.com/ -->
 
 ## Authors
 

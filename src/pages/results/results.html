@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <img src="././assets/imgs/logo-large.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <h1> Valid Scores </h1>
+    <ion-item *ngFor="let result of validResults">
+      <h2>{{ result.attributes.athletename }}</h2>
+      <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
+      <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+      <h1> Invalid Scores </h1>
+    <ion-item *ngFor="let result of invalidResults">
+      <h2h2>{{ result.attributes.athletename }}</h2>
+      <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
+      <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
+    </ion-item>
+  </ion-list>
+</ion-content>
