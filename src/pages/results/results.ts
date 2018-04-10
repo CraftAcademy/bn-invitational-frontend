@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HttpModule } from '@angular/http';
-import { resolvePtr } from 'dns';
+import { IonicPage } from 'ionic-angular';
 import { ResultsProvider } from '../../providers/results/results';
 
 @IonicPage()
@@ -14,7 +12,7 @@ export class ResultsPage {
   validResults: any = []
   invalidResults: any = []
 
-  constructor(private resultsProvider: ResultsProvider, private navCtrl: NavController) {
+  constructor(private resultsProvider: ResultsProvider) {
     this.resultsProvider
         .all()
         .subscribe(results => {

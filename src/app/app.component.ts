@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Platform, Modal, ModalController, AlertController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, ModalController, AlertController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { OneSignal } from '@ionic-native/onesignal';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,12 +13,15 @@ import { TabsPage } from '../pages/tabs/tabs';
 export class MyApp {
   rootPage:any = TabsPage;
 
+  @ViewChild(Nav) nav;
+
   constructor(platform: Platform, 
       private oneSignal: OneSignal, 
               statusBar: StatusBar, 
               splashScreen: SplashScreen, 
               modalCtrl: ModalController,
       private alertCtrl: AlertController) {
+
     platform.ready().then(() => {
       
       let splash = modalCtrl.create(SplashPage);
@@ -43,6 +46,9 @@ export class MyApp {
       let title = data.notification.payload.title;
       let message = data.notification.payload.body;
 
+      // let action = data.notification.payload.additionalData['action'];
+      //let actionId = data.notification.payload.additionalData['id'];
+
       let alert = this.alertCtrl.create({
         title: title,
         subTitle: message,
@@ -50,6 +56,12 @@ export class MyApp {
           {
             text: 'Close',
             role: 'cancel'
+          }, {
+            text: 'Open',
+            handler: () => {
+              
+              //this.nav.push(AthletePage, { athlete_id: actionId });
+            }
           }
         ]
 
