@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <div class="results">
+  <div *ngIf="finalStanding == true" class="results">
     <ion-list>
       <h1>Final Standings</h1>
       <ion-item *ngFor="let result of validResults| slice:0:1; let i = index" [attr.data-index]="i">
@@ -45,5 +45,11 @@
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
     </ion-list>
+  </div>
+
+  <div *ngIf="finalStanding == false" class="results">
+    <h3>Results Coming Soon</h3>
+    <p>"Remember, boys, no points for second place."</p>
+    <p>"It takes a lot more than just fancy skiing to win this."</p>
   </div>
 </ion-content>
