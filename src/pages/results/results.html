@@ -28,9 +28,9 @@
         <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
-      <ion-item *ngFor="let result of validResults| slice:4; let i = index" [attr.data-index]="i">
-        <h1 item-start class="number"> {{ i + 1 }} </h1>
-        <h2>{{ result.attributes.athletename.toFixed(1) }}</h2>
+      <ion-item *ngFor="let result of validResults| slice:3:10000; let i = index" [attr.data-index]="i">
+        <h1 item-start class="number"> {{ i + 4}} </h1>
+        <h2>{{ result.attributes.athletename }}</h2>
         <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
