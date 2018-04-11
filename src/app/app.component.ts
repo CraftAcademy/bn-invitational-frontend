@@ -5,6 +5,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AthletePage } from '../pages/athlete/athlete';
+import { ResultsPage } from '../pages/results/results';
 import { SplashPage } from '../pages/splash/splash';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -46,6 +47,10 @@ export class MyApp {
       if(action === "openPage") {
         this.nav.push(AthletePage, { athlete_id: actionId });
       } 
+
+      if(action === "openResults") {
+        this.nav.push(ResultsPage);
+      }
 
     });
     this.oneSignal.endInit();
