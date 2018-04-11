@@ -1,9 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, ModalController, AlertController, Nav } from 'ionic-angular';
+import { Platform, ModalController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { OneSignal } from '@ionic-native/onesignal';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AthletePage } from '../pages/athlete/athlete';
 import { SplashPage } from '../pages/splash/splash';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -19,8 +20,7 @@ export class MyApp {
       private oneSignal: OneSignal, 
               statusBar: StatusBar, 
               splashScreen: SplashScreen, 
-              modalCtrl: ModalController,
-      private alertCtrl: AlertController) {
+              modalCtrl: ModalController) {
 
     platform.ready().then(() => {
       
@@ -36,37 +36,22 @@ export class MyApp {
   setupPush() {
     this.oneSignal.startInit('316f8be0-f2fa-4323-9d04-86a62f80dac4');
 
-    this.oneSignal.handleNotificationReceived().subscribe(data => {
-      console.log('We recieved a push:', data);
-    });
+    // this.oneSignal.handleNotificationReceived().subscribe(data => {
+    //   console.log('We recieved a push:', data);
+    // });
 
     this.oneSignal.handleNotificationOpened().subscribe(data => {
       console.log('We opened a push:', data);
 
-      let title = data.notification.payload.title;
-      let message = data.notification.payload.body;
+      // let title = data.notification.payload.title;
+      // let message = data.notification.payload.body;
 
       // let action = data.notification.payload.additionalData['action'];
-      //let actionId = data.notification.payload.additionalData['id'];
-
-      let alert = this.alertCtrl.create({
-        title: title,
-        subTitle: message,
-        buttons: [
-          {
-            text: 'Close',
-            role: 'cancel'
-          }, {
-            text: 'Open',
-            handler: () => {
-              
-              //this.nav.push(AthletePage, { athlete_id: actionId });
-            }
-          }
-        ]
-
-      })
-      alert.present();
+      let actionId = data.notification.payload.additionalData['id'];
+      
+      this.nav.push(AthletePage, { athlete_id: actionId });
+      
+      
     });
     this.oneSignal.endInit();
 
