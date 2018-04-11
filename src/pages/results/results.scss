@@ -36,6 +36,24 @@ page-results {
     width: 1.6em;
   }
 
+  .goldTrophy {
+    background: #f2a818;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 5px;
+    text-align: center;
+    width: 1.6em;
+  }
+
+  ion-icon {
+    font-size: 3.0vh !important;
+  }
+
   .x {
     background: #ff689d;
     border-radius: 0.8em;
