@@ -11,25 +11,25 @@
     <ion-list>
       <h1>Final Standings</h1>
       <ion-item *ngFor="let result of validResults| slice:0:1; let i = index" [attr.data-index]="i">
-      <ion-icon item-start class="goldTrophy" name="trophy"></ion-icon>
+        <ion-icon item-start class="goldTrophy" name="trophy"></ion-icon>
         <h2>{{ result.attributes.athletename }}</h2>
         <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
       <ion-item *ngFor="let result of validResults| slice:1:2; let i = index" [attr.data-index]="i">
-        <h1 item-start class="silverTrophy"> {{ i + 1 }} </h1>
+        <ion-icon item-start class="silverTrophy" name="trophy"></ion-icon>
         <h2>{{ result.attributes.athletename }}</h2>
         <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
       <ion-item *ngFor="let result of validResults| slice:2:3; let i = index" [attr.data-index]="i">
-        <h1 item-start class="bronseTrophy"> {{ i + 1 }} </h1>
+        <ion-icon item-start class="bronseTrophy" name="trophy"></ion-icon>
         <h2>{{ result.attributes.athletename }}</h2>
         <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
       </ion-item>
       <ion-item *ngFor="let result of validResults| slice:4; let i = index" [attr.data-index]="i">
-        <h1 item-start class="number"> {{ i + 1 }} </h1>
+        <ion-icon item-start class="bronseTrophy" name="trophy"></ion-icon>
         <h2>{{ result.attributes.athletename }}</h2>
         <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
