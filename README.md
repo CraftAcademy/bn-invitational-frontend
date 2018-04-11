@@ -44,7 +44,7 @@ Our restless coaches supported us in this project:
 ![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/voting.png)
 ![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/notifications.png)
 ![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/finalStanding.png)
-![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/homescreen.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/homescreen.jpg)
 
 ## License
 
