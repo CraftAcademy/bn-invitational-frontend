@@ -7,20 +7,43 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-      <h1> Valid Scores </h1>
-    <ion-item *ngFor="let result of validResults">
-      <h2>{{ result.attributes.athletename }}</h2>
-      <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
-      <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
-    </ion-item>
-  </ion-list>
-  <ion-list>
-      <h1> Invalid Scores </h1>
-    <ion-item *ngFor="let result of invalidResults">
-      <h2>{{ result.attributes.athletename }}</h2>
-      <p>Final Score: <strong>{{ result.attributes.score }}</strong></p>
-      <p>Number of votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
-    </ion-item>
-  </ion-list>
+  <div class="results">
+    <ion-list>
+      <h1>Final Standings</h1>
+      <ion-item *ngFor="let result of validResults| slice:0:1; let i = index" [attr.data-index]="i">
+        <h1 class="icon"> <ion-icon class="goldTrophy" name="trophy"></ion-icon> </h1>
+        <h2>{{ result.attributes.athletename }}</h2>
+        <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
+        <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
+      </ion-item>
+      <ion-item *ngFor="let result of validResults| slice:1:2; let i = index" [attr.data-index]="i">
+        <h1 class="icon"><ion-icon class="silverTrophy" name="trophy"></ion-icon></h1>
+        <h2>{{ result.attributes.athletename }}</h2>
+        <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
+        <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
+      </ion-item>
+      <ion-item *ngFor="let result of validResults| slice:2:3; let i = index" [attr.data-index]="i">
+        <h1 class="icon"><ion-icon class="bronseTrophy" name="trophy"></ion-icon></h1>
+        <h2>{{ result.attributes.athletename }}</h2>
+        <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
+        <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
+      </ion-item>
+      <ion-item *ngFor="let result of validResults| slice:3:10000; let i = index" [attr.data-index]="i">
+        <h1 class="icon number"> {{ i + 4}} </h1>
+        <h2>{{ result.attributes.athletename }}</h2>
+        <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
+        <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
+      </ion-item>
+    </ion-list>
+    
+    <ion-list>
+      <h5> Insufficient Scores </h5>
+      <ion-item *ngFor="let result of invalidResults">
+        <h1 class="icon x"> X </h1>
+        <h2>{{ result.attributes.athletename }}</h2>
+        <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
+        <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
