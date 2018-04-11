@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { AthletesPage } from '../athletes/athletes';
+import { IonicPage, NavParams, AlertController } from 'ionic-angular';
 import { AthletesProvider } from '../../providers/athletes/athletes';
 import { Storage } from '@ionic/storage';
 
@@ -17,9 +16,8 @@ export class AthletePage {
   hasVoted: boolean = false;
   message: any;
   theValues: [string];
-  
+
   constructor(private athletesProvider: AthletesProvider,
-    private navCtrl: NavController,
     private alertCtrl: AlertController,
     private navParams: NavParams,
     private storage: Storage) {
@@ -148,4 +146,3 @@ export class AthletePage {
   }
 
 }
-

@@ -28,23 +28,28 @@
     "@angular/platform-browser": "5.2.9",
     "@angular/platform-browser-dynamic": "5.2.9",
     "@ionic-native/core": "4.6.0",
+    "@ionic-native/onesignal": "^4.7.0",
     "@ionic-native/splash-screen": "4.6.0",
     "@ionic-native/status-bar": "4.6.0",
     "@ionic/pro": "1.0.20",
     "@ionic/storage": "^2.1.3",
+    "cordova-android": "7.0.0",
     "cordova-browser": "5.0.3",
+    "cordova-ios": "^4.5.4",
     "cordova-plugin-device": "^2.0.1",
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-http": "^1.2.0",
     "cordova-plugin-ionic": "^4.1.3",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
-    "cordova-plugin-ionic-webview": "^1.1.16",
+    "cordova-plugin-ionic-webview": "^1.2.0",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.1",
     "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-wheel-selector-plugin": "~1.0.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "nmp": "^1.0.3",
+    "onesignal-cordova-plugin": "^2.3.3",
     "rxjs": "5.5.8",
     "sw-toolbox": "3.6.0",
     "update": "^0.7.4",
@@ -53,7 +58,7 @@
   "devDependencies": {
     "@ionic/app-scripts": "3.1.8",
     "@types/jasmine": "^2.8.6",
-    "@types/node": "^9.6.2",
+    "@types/node": "^9.6.4",
     "angular2-template-loader": "^0.6.2",
     "html-loader": "^0.5.5",
     "istanbul-instrumenter-loader": "^3.0.1",
@@ -78,7 +83,10 @@
       "cordova-plugin-ionic": {
         "APP_ID": "510f0823",
         "CHANNEL_NAME": "Master",
-        "UPDATE_METHOD": "background"
+        "UPDATE_METHOD": "background",
+        "WARN_DEBUG": "true",
+        "UPDATE_API": "https://api.ionicjs.com",
+        "MAX_STORE": "2"
       },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
@@ -86,10 +94,14 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-http": {},
-      "cordova-plugin-statusbar": {}
+      "cordova-plugin-statusbar": {},
+      "onesignal-cordova-plugin": {},
+      "cordova-wheel-selector-plugin": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "ios",
+      "android"
     ]
   }
 }

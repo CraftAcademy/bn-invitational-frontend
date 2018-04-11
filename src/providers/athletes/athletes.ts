@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
@@ -6,7 +5,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AthletesProvider {
   private apiUrl: string = 'https://votingapi.herokuapp.com/api/v1/athletes';
-  
+
   constructor(private http: Http) {}
 
   // GET athletes
@@ -14,13 +13,14 @@ export class AthletesProvider {
     return this.http.get(this.apiUrl)
                     .map((response: Response) => response.json());
   }
-  
+
   // GET athletes/id
   show(id: any) {
     return this.http.get(`${this.apiUrl}/${id}`)
                     .map((response: Response) => response.json());
 
   }
+
 
   // UPDATE result
   update(id, result){
@@ -33,4 +33,3 @@ export class AthletesProvider {
   }
 
 }
-
