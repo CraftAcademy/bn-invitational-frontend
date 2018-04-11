@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
-      <ion-title>
-        <img src="././assets/imgs/logo-large.png" (click)="clear()">
+      <ion-title (click)="clear()">
+        <img src="././assets/imgs/logo-large.png">
       </ion-title>
     </ion-navbar>
   </ion-header>
@@ -25,7 +25,7 @@
         <h1>VOTE NOW !</h1>
       </button>
   
-      <button *ngIf="hasVoted==true && athlete.attributes.hasraced==false || athlete.attributes.hasraced==true" ion-button full class="voteBtn notActive" color="disabled">
+      <button *ngIf="hasVoted==true && (athlete.attributes.hasraced==false || athlete.attributes.hasraced==true)" ion-button full class="voteBtn notActive" color="disabled">
         <ion-icon ios="ios-checkmark-circle-outline" md="md-checkmark-circle-outline"></ion-icon>
         <h1>THANK YOU !</h1>
       </button>
