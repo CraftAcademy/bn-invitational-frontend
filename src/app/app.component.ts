@@ -48,7 +48,7 @@ export class MyApp {
         this.nav.push(AthletePage, { athlete_id: actionId });
       } 
 
-      if(action === "openResults") {
+      else if(action === "openResults") {
         this.nav.push(ResultsPage);
       }
 
