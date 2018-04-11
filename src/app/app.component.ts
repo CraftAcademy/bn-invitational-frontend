@@ -34,7 +34,7 @@ export class MyApp {
   }
   
   setupPush() {
-    this.oneSignal.startInit('316f8be0-f2fa-4323-9d04-86a62f80dac4');
+    this.oneSignal.startInit('316f8be0-f2fa-4323-9d04-86a62f80dac4', '203539919772');
     this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
 
     this.oneSignal.handleNotificationOpened().subscribe(data => {
@@ -46,7 +46,7 @@ export class MyApp {
       if(action === "openPage") {
         this.nav.push(AthletePage, { athlete_id: actionId });
       } 
-      
+
     });
     this.oneSignal.endInit();
 
