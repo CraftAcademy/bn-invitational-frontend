@@ -1,14 +1,14 @@
-# B&N Invitational - Front-End
+# ⛷️📱❄️🏆 B&N Invitational - Front-End 🏆❄️📱⛷️
 
 ## About our app
 
-B&N Invitational - FreeSki Event, founded by Benjamin Åsberg & Niklas Lundgren.
-Taking place in Åre, Sweden the 28th of April for the first time.
+B&N Invitational - FreeSki Event ⛷️, founded by Benjamin Åsberg & Niklas Lundgren.
+Taking place in Åre, Sweden 🇸🇪 the 28th of April for the first time.
 
-We are developing a voting application that will help to crown the winner of the event.
-The purpose of the app is to let the crowd determine who will win.
+We are developing a mobile voting application 📱 that will help to crown 👑 the winner of the event.
+The purpose of the app is to let the crowd 👏 determine who will win.
 
-Users can vote on athletes from a scale from 1 - 10 and whom ever get the highest average score will win.
+Users can vote on athletes from a scale from 1 - 10 and whom ever get the highest average score will win.🏆
 
 Happy Voting!
 
@@ -16,18 +16,8 @@ Happy Voting!
 
 ## Technologies
 
-* **Inonic - mobile framework** https://ionicframework.com/
-
-
-<!-- ### Testing
-
-* **RSpec** https://github.com/rspec/rspec-rails
-* **Pry** https://github.com/pry/pry
-* **Factory Bot** https://github.com/thoughtbot/factory_bot_rails
-* **Launchy** https://github.com/copiousfreetime/launchy
-* **Shoulda Matchers** https://github.com/thoughtbot/shoulda-matchers
-* **Coveralls** http://coveralls.io/
-* **Semaphoreci - CI** https://semaphoreci.com/ -->
+* **Ionic - Mobile framework** https://ionicframework.com/
+* **One signal - Push notifications service - push notifications** https://onesignal.com/
 
 ## Authors
 
@@ -46,6 +36,15 @@ Our restless coaches supported us in this project:
 * Faraz Naeem https://github.com/faraznaeem
 * Magnus Þór Ársælsson https://github.com/magnus-thor
 * Oliver Ochman https://github.com/oliverochman
+
+## Screenshots
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/info.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/athlete.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/athletes.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/voting.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/notifications.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/finalStanding.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/homescreen.png)
 
 ## License
 
