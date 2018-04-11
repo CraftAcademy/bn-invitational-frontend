@@ -3,14 +3,9 @@ page-results {
     text-align: center;
   }
 
-  .results h3 {
-    font-size: 3.0vh;
-    color: #666666;
-  }
-
-  .results h4 {
+  .results h2 {
     font-size: 2.5vh;
-    color: #666666;
+    font-weight: 400;
   }
 
   .results h5 {
@@ -18,79 +13,41 @@ page-results {
     text-align: center;
   }
 
-  .item-md ion-icon {
-    font-size: 10.0vh;
-  }
-
-  .number {
-    background: #12948e;
-    border-radius: 0.8em;
-    -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1.6em;
-    margin-right: 5px;
-    text-align: center;
-    width: 1.6em;
+  .icon {
+    color: #fff;
+    border-radius: 1.2em;
+    -moz-border-radius: 1.2em;
+    -webkit-border-radius: 1.2em;
+    width: 2em;
+    line-height: 10vh;
+    font-size: 5vh;
+    float: left;
+    margin-right: 20px;
   }
 
   .goldTrophy {
     background: #f2a818;
-    border-radius: 0.8em;
-    -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1.6em;
-    text-align: center;
-    width: 1.6em;
-    white-space: nowrap;
   }
 
   .silverTrophy {
     background: #c0c0c0;
-    border-radius: 0.8em;
-    -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1.6em;
-    text-align: center;
-    width: 1.6em;
   }
 
   .bronseTrophy {
     background: #cd7f32;
-    border-radius: 0.8em;
-    -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1.6em;
-    text-align: center;
-    width: 1.6em;
   }
 
-  ion-icon {
-    font-size: 4.5vh !important;
-  }
-
-  .x {
+  h1.x {
+    color: #fff;
+    font-size: 5vh;
+    width: 2em;
     background: #ff689d;
-    border-radius: 0.8em;
-    -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 1.6em;
-    margin-right: 1000px;
-    text-align: center;
-    width: 1.6em;
+  }
+
+  h1.number {
+    color: #fff;
+    font-size: 5vh;
+    width: 2em;
+    background: #336699;
   }
 }
