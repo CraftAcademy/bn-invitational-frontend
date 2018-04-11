@@ -30,22 +30,18 @@
       </ion-item>
       <ion-item *ngFor="let result of validResults| slice:4; let i = index" [attr.data-index]="i">
         <h1 item-start class=“number”> {{ i + 1 }} </h1>
-        <div class="scoreText">
         <h2>{{ result.attributes.athletename.toFixed(1) }}</h2>
         <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
-        </div>
       </ion-item>
     </ion-list>
     <ion-list>
       <h5> Insufficient Scores </h5>
       <ion-item *ngFor="let result of invalidResults">
         <h1 item-start class="x"> X </h1>
-        <div class="insufficientText" >
         <h6>{{ result.attributes.athletename }}</h6>
         <p>Final Score: <strong>{{ result.attributes.score.toFixed(1) }}</strong></p>
         <p>Number of Votes: <strong>{{ result.attributes.numberofvotes }}</strong></p>
-        </div>
       </ion-item>
     </ion-list>
   </div>
