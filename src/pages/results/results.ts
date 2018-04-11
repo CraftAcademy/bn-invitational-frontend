@@ -22,11 +22,9 @@ export class ResultsPage {
         for (var j:number = 0; j < results.data.length; j++){
           if(results.data[j].attributes.validscore == true){
             this.readyToPublish++ 
-            console.log(j)
           }
         }
-        console.log(this.readyToPublish)
-        console.log(results.data.length)
+
         if(this.readyToPublish == results.data.length){
           this.finalStanding = true
           for( var i:number = 0; i < results.data.length; i++) {
