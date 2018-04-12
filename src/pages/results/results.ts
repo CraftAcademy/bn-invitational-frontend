@@ -30,7 +30,7 @@ export class ResultsPage {
   }
   
   ionViewDidLoad() {
-    this.resultsProvider 
+    this.resultsProvider
       .all()
       .subscribe(results => {
         this.resultsPublished = results.data[0].attributes.hasraced
@@ -45,4 +45,13 @@ export class ResultsPage {
 
       this.viewCtrl.setBackButtonText('');  
   }
+
+  ionViewDidLeave() {
+    this.resultsProvider
+      .all()
+      .subscribe(results => {
+        this.resultsPublished = results.data[0].attributes.hasraced
+      });
+  }
+
 }

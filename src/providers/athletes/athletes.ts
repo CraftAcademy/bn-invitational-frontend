@@ -29,7 +29,7 @@ export class AthletesProvider {
     headers.append("Accept" , 'application/json');
     headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
-    return this.http.put(`${this.apiUrl}/${id}`, body, options)
+    return this.http.post(`${this.apiUrl}/${id}`, body, options)
   }
 
 }
