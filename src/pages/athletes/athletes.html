@@ -1,4 +1,5 @@
 <ion-header>
+<<<<<<< HEAD
     <ion-navbar>
       <ion-title>
         <img src="././assets/imgs/logo-large.png">
@@ -12,6 +13,22 @@
       <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
     
+=======
+  <ion-navbar>
+    <ion-title>
+      <img src="././assets/imgs/logo-large.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ng-container>
+>>>>>>> 3e2d70adebddbc6a982fd78d0b35954185ad9179
     <ion-list>
       <h1 class="title">Skiers</h1>
       <ion-item *ngFor="let athlete of athletes" (click)="launchAthletePage(athlete.id)">
@@ -25,4 +42,9 @@
         </p>
       </ion-item>
     </ion-list>
+<<<<<<< HEAD
   </ion-content>
+=======
+  </ng-container>
+</ion-content>
+>>>>>>> 3e2d70adebddbc6a982fd78d0b35954185ad9179
