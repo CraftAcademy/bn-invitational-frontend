@@ -45,13 +45,4 @@ export class ResultsPage {
 
       this.viewCtrl.setBackButtonText('');  
   }
-
-  ionViewDidLeave() {
-    this.resultsProvider
-      .all()
-      .subscribe(results => {
-        this.resultsPublished = results.data[0].attributes.hasraced
-      });
-  }
-
 }
