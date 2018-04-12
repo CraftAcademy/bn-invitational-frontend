@@ -1,16 +1,28 @@
 page-home {
+
+    .ski {
+        width: 20%;
+        height: auto;
+        margin: 5%;
+    }
+
+    .headline {
+        text-align: center;
+        font-size: 3.0vh;
+    }
+
     @keyframes animatedBackground {
         from { background-position: 0 0; }
         to { background-position: 100% 0; }
     }
-    
+
     @-webkit-keyframes animatedBackground {
         from { background-position: 0 0; }
         to { background-position: 100% 0; }
     }
-        
+
     .scroll-content{
-           
+
         background-image: url(./../assets/imgs/bg_landscape-hd.png);
         background-position: 0px 0px;
         background-repeat: repeat-x;
