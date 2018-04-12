@@ -1,16 +1,26 @@
 page-results {
-  .results h1 {
+  h1.results {
     text-align: center;
   }
 
-  .results h2 {
-    font-size: 2.5vh;
+  h2.results {
+    font-size: 2.8vh;
     font-weight: 400;
   }
 
-  .results h5 {
+  h5.results {
     font-size: 3.0vh;
     text-align: center;
+  }
+
+  h1.title {
+    text-align: left;
+    margin-left: 20px; 
+  }
+
+  h5.subtitle {
+    text-align: left;
+    margin-left: 20px;
   }
 
   .icon {
@@ -19,10 +29,10 @@ page-results {
     -moz-border-radius: 1.2em;
     -webkit-border-radius: 1.2em;
     width: 2em;
+    text-align: center;
     line-height: 10vh;
     font-size: 5vh;
     float: left;
-    margin-right: 20px;
   }
 
   .goldTrophy {
@@ -39,14 +49,12 @@ page-results {
 
   h1.x {
     color: #fff;
-    font-size: 5vh;
     width: 2em;
     background: #ff689d;
   }
 
   h1.number {
     color: #fff;
-    font-size: 5vh;
     width: 2em;
     background: #336699;
   }

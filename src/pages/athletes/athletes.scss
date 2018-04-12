@@ -1,11 +1,21 @@
 page-athletes {
     .item-md ion-avatar ion-img, .item-md ion-avatar img {
-        width: 55px;
-        height: 55px;
+        width: 68px;
+        height: 68px;
     }
 
     .item-ios ion-avatar img {
-        width: 55px;
-        height: 55px;
+        width: 68px;
+        height: 68px;
+    }
+
+    h1.title {
+        text-align: left;
+        margin-left: 20px; 
+      }
+
+     h2.name {
+        font-size: 2.8vh;
+        font-weight: 400;
     }
 }

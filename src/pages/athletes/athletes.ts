@@ -37,6 +37,7 @@ export class AthletesPage {
   }
 
   ionViewDidLeave() {
+    console.log('Hes leaving');
     this.athletesProvider
       .all()
       .subscribe(athletes => {
