@@ -1,24 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      <img src="././assets/imgs/logo-large.png">
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-
-  <ion-refresher (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-
-  <ion-list>
-    <ion-item *ngFor="let athlete of athletes" (click)="launchAthletePage(athlete.id)">
-      <ion-avatar item-start>
-        <img src="{{ athlete.attributes.image }}">
-      </ion-avatar>
-      <h2>{{ athlete.attributes.name }}</h2>
-      <p>{{ athlete.attributes.home }}</p>
-    </ion-item>
-  </ion-list>
-</ion-content>
+    <ion-navbar>
+      <ion-title>
+        <img src="././assets/imgs/logo-large.png">
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    
+    <ion-list>
+      <h1 class="title">Skiers</h1>
+      <ion-item *ngFor="let athlete of athletes" (click)="launchAthletePage(athlete.id)">
+        <ion-avatar item-start>
+          <img src="{{ athlete.attributes.image }}">
+        </ion-avatar>
+        <h2 class="name">{{ athlete.attributes.name }}</h2>
+        <p>{{ athlete.attributes.home }}</p>
+        <p>Start-nr:
+          <strong>{{ athlete.attributes.starttime }}</strong>
+        </p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
