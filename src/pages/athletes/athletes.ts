@@ -36,4 +36,12 @@ export class AthletesPage {
       this.navCtrl.push(AthletePage, { athlete_id: id });
   }
 
+  ionViewDidLeave() {
+    this.athletesProvider
+      .all()
+      .subscribe(athletes => {
+        this.athletes = athletes.data;
+     });
+  }
+
 }
