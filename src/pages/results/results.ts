@@ -9,10 +9,11 @@ import { ResultsProvider } from '../../providers/results/results';
 })
 export class ResultsPage {
 
-  validResults: any = []
-  invalidResults: any = []
+  validResults: any = [];
+  invalidResults: any = [];
   readyToPublish:number = 1;
-  finalStanding:boolean = false
+  finalStanding:boolean = false;
+  resultsPublished: boolean = false;
 
   constructor(private resultsProvider: ResultsProvider) {
     this.resultsProvider
@@ -38,4 +39,17 @@ export class ResultsPage {
       }
     )
   }
+
+  doRefresh(refresher) {
+    this.resultsProvider
+      .all()
+      .subscribe(results => {
+        this.resultsPublished = results.data[0].attributes.hasraced
+      });
+
+    setTimeout(() => {
+      refresher.complete();
+    }, 2000);
+  }
+
 }
