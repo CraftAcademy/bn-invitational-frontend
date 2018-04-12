@@ -20,6 +20,18 @@ export class AthletesPage {
              });
   }
 
+  doRefresh(refresher) {
+    this.athletesProvider
+      .all()
+      .subscribe(athletes => {
+        this.athletes = athletes.data;
+     });
+
+    setTimeout(() => {
+      refresher.complete();
+    }, 2000);
+  }
+
     launchAthletePage(id) {
       this.navCtrl.push(AthletePage, { athlete_id: id });
   }
