@@ -36,4 +36,13 @@ export class AthletesPage {
       this.navCtrl.push(AthletePage, { athlete_id: id });
   }
 
+  ionViewDidLeave() {
+    console.log('Hes leaving');
+    this.athletesProvider
+      .all()
+      .subscribe(athletes => {
+        this.athletes = athletes.data;
+     });
+  }
+
 }
