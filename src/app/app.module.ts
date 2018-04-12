@@ -10,7 +10,6 @@ import { AthletePage } from '../pages/athlete/athlete';
 import { AthletesPage } from '../pages/athletes/athletes';
 import { ResultsPage } from '../pages/results/results';
 import { TabsPage } from '../pages/tabs/tabs';
-import { SplashPage } from '../pages/splash/splash';
 import { OneSignal } from '@ionic-native/onesignal';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,8 +24,7 @@ import { ResultsProvider } from '../providers/results/results';
     AthletePage,
     AthletesPage,
     ResultsPage,
-    TabsPage,
-    SplashPage
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -41,8 +39,7 @@ import { ResultsProvider } from '../providers/results/results';
     AthletePage,
     AthletesPage,
     ResultsPage,
-    TabsPage,
-    SplashPage
+    TabsPage
   ],
   providers: [
     StatusBar,
