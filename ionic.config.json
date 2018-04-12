@@ -4,5 +4,11 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "https://votingapi.herokuapp.com/api/v1"
+    }
+  ]
 }
