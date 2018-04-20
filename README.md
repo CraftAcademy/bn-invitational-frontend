@@ -10,6 +10,8 @@ The purpose of the app is to let the crowd 👏 determine who will win.
 
 Users can vote on athletes from a scale from 1 - 10 and whom ever get the highest average score will win.🏆
 
+To use the app you can download it from the [App Store](https://itunes.apple.com/us/app/ben-nik-invitational/id1370912583?app=itunes&platform=iphone&preserveScrollPosition=true#platform/iphone "App Store") for your iOS devices or [Google Play](https://play.google.com/store/apps/details?id=com.davidboll.bninvitationals "Google Play") for Android.
+
 Happy Voting!
 
 *For backend of this project, see:* https://github.com/CraftAcademy/bn-invitational-backend
@@ -38,7 +40,7 @@ Our restless coaches supported us in this project:
 * Oliver Ochman https://github.com/oliverochman
 
 ## Screenshots
-![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/info.png)
+![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/Info.png)
 ![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/athlete.png)
 ![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/athletes.png)
 ![alt text](https://raw.githubusercontent.com/CraftAcademy/bn-invitational-frontend/develop/screenshots/voting.png)
